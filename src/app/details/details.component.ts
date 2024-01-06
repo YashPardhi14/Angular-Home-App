@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component,  inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-inject
+import { HousingService } from '../housing.service';
+import { HousingLocation } from '../housing-location';
 @Component({
   selector: 'app-details',
   standalone: true,
@@ -11,10 +12,14 @@ inject
 })
 export class DetailsComponent {
 routes:ActivatedRoute =inject(ActivatedRoute);
-housingLocationId=0;
+housingServices=inject(HousingService);
+housingLocation:HousingLocation|undefined;
+
+
 
 constructor(){
-  this.housingLocationId=Number(this.routes.snapshot.params['id']);
+  const housingLocationId=Number(this.routes.snapshot.params['id']);
+this.housingLocation=this.housingServices.getHousingLocationById(housingLocationId);
 }
 
 

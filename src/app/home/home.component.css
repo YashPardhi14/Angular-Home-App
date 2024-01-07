@@ -17,12 +17,11 @@
     width: 30%;
   }
   
-  button {
+  button.primary {
     padding: 10px;
-    border: solid 1px var(--primary-color);
-    background: var(--primary-color);
+    border: solid 1px black;
+    background-color:#7F00FF;
     color: white;
-    background-color: grey;
     border-radius: 8px;
   }
   

@@ -69,3 +69,10 @@
       height: 400px;
     }
   }
+  button.primary {
+    padding: 10px;
+    border: solid 1px black;
+    background-color:#7F00FF;
+    color: white;
+    border-radius: 8px;
+  }
